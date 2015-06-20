@@ -3,8 +3,8 @@
 ## the R language and how they can be manipulated to preserve state inside
 ## of an R object.
 
-## This makeCacheMatrix function received matrix as an input and
-## cached its inversed value
+## This makeCacheMatrix function creates a special "matrix" to be used
+## with cacheSolve function to cache its inversed value
 
 makeCacheMatrix <- function(myMatrix = matrix()) {
   inverse <- NULL
@@ -21,9 +21,9 @@ makeCacheMatrix <- function(myMatrix = matrix()) {
 }
 
 
-## This cacheSolve function computes inversed matrix values using
-## R solve() function. If inversed values already calculated, the returns
-## values will be retrieved from the cache rather than recalculated it
+## This cacheSolve function calculates inversed values for special "matrix"
+## created using makeCacheMatrix function. If inversed values already calculated, 
+## the returns values will be retrieved from the cache rather than recalculate it
 
 cacheSolve <- function(myMatrix, ...) {
   inverse <- myMatrix$getInverse()
