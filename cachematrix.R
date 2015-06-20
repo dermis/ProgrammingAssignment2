@@ -4,7 +4,7 @@
 ## of an R object.
 
 ## This makeCacheMatrix function creates a special "matrix" to be used
-## with cacheSolve function to cache its inversed value
+## with cacheSolve function to cache its inversed value.
 
 makeCacheMatrix <- function(myMatrix = matrix()) {
   inverse <- NULL
